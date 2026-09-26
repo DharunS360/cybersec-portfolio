@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #050810;
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  cursor: auto;
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: none;
+  }
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #050810; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00bfff, #00d4ff);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d4ff, #00bfff);
+}
+
+::selection {
+  background: #00bfff;
+  color: #050810;
+}
+
+.glow-text {
+  text-shadow:
+    0 0 10px rgba(0, 191, 255, 0.8),
+    0 0 20px rgba(0, 191, 255, 0.5),
+    0 0 30px rgba(0, 191, 255, 0.3);
+}
+
+.glow-text-blue {
+  text-shadow:
+    0 0 10px rgba(0, 191, 255, 0.8),
+    0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+.glow-text-soft {
+  text-shadow:
+    0 0 8px rgba(0, 191, 255, 0.5),
+    0 0 16px rgba(0, 191, 255, 0.3);
+}
+
+.glass {
+  background: rgba(10, 20, 36, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 191, 255, 0.15);
+}
+
+.glass-strong {
+  background: rgba(10, 20, 36, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 191, 255, 0.25);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 191, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.dot-bg {
+  background-image: radial-gradient(rgba(0, 191, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.scan-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 191, 255, 0.06),
+    transparent
+  );
+  animation: scanLine 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes threatScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.threat-marquee {
+  animation: threatScroll 40s linear infinite;
+}
+
+.threat-marquee:hover {
+  animation-play-state: paused;
+}
+
+.noise::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.02;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ============================================ */
+/* SOFT GLITCH (BLUE TEAM — SUBTLE)             */
+/* ============================================ */
+
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+
+.glitch-main {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+.glitch-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.glitch-layer-1 {
+  color: #00bfff;
+}
+
+.glitch-layer-2 {
+  color: #00d4ff;
+}
+
+.glitch-wrapper.glitching .glitch-layer-1 {
+  opacity: 0.5;
+  animation: softShake1 0.2s ease-in-out;
+}
+
+.glitch-wrapper.glitching .glitch-layer-2 {
+  opacity: 0.3;
+  animation: softShake2 0.2s ease-in-out;
+}
+
+.glitch-wrapper.glitching .glitch-main {
+  animation: softShift 0.2s ease-in-out;
+}
+
+@keyframes softShake1 {
+  0% { transform: translate(0); }
+  50% { transform: translate(-1px, 0.5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes softShake2 {
+  0% { transform: translate(0); }
+  50% { transform: translate(1px, -0.5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes softShift {
+  0% { transform: translate(0); }
+  50% { transform: translate(-0.3px, 0); }
+  100% { transform: translate(0); }
+}
+
+/* ============================================ */
+/* BRUTALIST (BLUE TEAM)                        */
+/* ============================================ */
+
+.brutalist-border {
+  border: 2px solid #00bfff;
+  box-shadow: 6px 6px 0 rgba(0, 191, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.brutalist-border:hover {
+  box-shadow: 10px 10px 0 rgba(0, 191, 255, 0.5);
+  transform: translate(-2px, -2px);
+}
+
+.barcode-deco {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #00bfff 0px,
+    #00bfff 2px,
+    transparent 2px,
+    transparent 5px,
+    #00bfff 5px,
+    #00bfff 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  height: 20px;
+  width: 120px;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 191, 255, 0.03) 0px,
+    rgba(0, 191, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 1;
+}
+
+.chromatic {
+  filter: drop-shadow(2px 0 0 rgba(0, 191, 255, 0.4))
+    drop-shadow(-2px 0 0 rgba(0, 212, 255, 0.4));
+}
+
+.terminal-glow {
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2),
+    inset 0 0 20px rgba(0, 191, 255, 0.05);
+}
+
+.text-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+.rotate-label {
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.rotate-label-alt {
+  transform: rotate(3deg);
+  display: inline-block;
+}
+
+/* ============================================ */
+/* SOC / BLUE TEAM COMPONENTS                   */
+/* ============================================ */
+
+.soc-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 20, 36, 0.9) 0%,
+    rgba(15, 29, 51, 0.85) 100%
+  );
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.soc-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00bfff, transparent);
+  animation: socScan 3s linear infinite;
+}
+
+@keyframes socScan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.alert-border-critical {
+  border-left: 3px solid #ff3b3b;
+  box-shadow: -2px 0 8px rgba(255, 59, 59, 0.3);
+}
+.alert-border-high {
+  border-left: 3px solid #ff9500;
+  box-shadow: -2px 0 8px rgba(255, 149, 0, 0.3);
+}
+.alert-border-medium {
+  border-left: 3px solid #ffb700;
+  box-shadow: -2px 0 8px rgba(255, 183, 0, 0.3);
+}
+.alert-border-low {
+  border-left: 3px solid #00bfff;
+  box-shadow: -2px 0 8px rgba(0, 191, 255, 0.3);
+}
+
+.status-online::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ff9d;
+  box-shadow: 0 0 8px #00ff9d;
+  margin-right: 6px;
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.data-stream {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 191, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: dataStream 4s linear infinite;
+}
+
+@keyframes dataStream {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 200%; }
+}
+
+/* ============================================ */
+/* SOFT CRT (BLUE TEAM)                         */
+/* ============================================ */
+
+.crt-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  margin: 20px;
+  padding: 20px;
+  background: #050810;
+  box-shadow:
+    inset 0 0 80px rgba(0, 191, 255, 0.04),
+    inset 0 0 150px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(0, 191, 255, 0.08);
+  filter: saturate(1.02) brightness(1.01);
+}
+
+.crt-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9990;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.crt-flicker {
+  display: none;
+}
+
+.crt-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9992;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 85%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.crt-curvature {
+  display: none;
+}
+
+.crt-chromatic {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9994;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.01) 0%,
+    transparent 3%,
+    transparent 97%,
+    rgba(0, 100, 255, 0.01) 100%
+  );
+}
+
+.crt-wrapper .glass,
+.crt-wrapper .glass-strong {
+  background: rgba(10, 20, 36, 0.9);
+  border-color: rgba(0, 191, 255, 0.35);
+}
+
+.crt-wrapper .glow-text {
+  text-shadow:
+    0 0 5px rgba(0, 191, 255, 0.7),
+    0 0 12px rgba(0, 191, 255, 0.4);
+}
+
+.crt-wrapper h1,
+.crt-wrapper h2,
+.crt-wrapper h3 {
+  text-shadow: 0 0 6px rgba(0, 191, 255, 0.4);
+}
+
+/* ============================================ */
+/* STAR FIELD TWINKLE ANIMATION                 */
+/* ============================================ */
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.twinkle {
+  animation: twinkle 3s ease-in-out infinite alternate;
+}

@@ -1,0 +1,111 @@
+import { useEffect, useRef } from "react";
+import { codeSnippets, fillerChars, columnColors } from "../data/codeSnippets";
+
+export default function CodeRain() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let raf;
+    let columns = [];
+    const fontSize = 14;
+    const lineHeight = 18;
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const colCount = Math.floor(canvas.width / fontSize);
+
+      columns = [];
+      for (let i = 0; i < colCount; i++) {
+        columns.push({
+          // Each column has a code snippet or uses filler chars
+          text: codeSnippets[Math.floor(Math.random() * codeSnippets.length)],
+          useCode: Math.random() > 0.4,
+          y: Math.random() * -canvas.height,
+          speed: 0.5 + Math.random() * 1.5,
+          color: columnColors[Math.floor(Math.random() * columnColors.length)],
+          columnX: i * fontSize,
+        });
+      }
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const draw = () => {
+      // Fade trail
+      ctx.fillStyle = "rgba(5, 8, 16, 0.08)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = `bold ${fontSize}px "JetBrains Mono", monospace`;
+      ctx.textBaseline = "top";
+
+      for (let i = 0; i < columns.length; i++) {
+        const col = columns[i];
+        const text = col.useCode ? col.text : fillerChars;
+        const chars = text.split("");
+        const x = col.columnX;
+
+        // Draw each character vertically
+        for (let j = 0; j < chars.length; j++) {
+          const charY = col.y + j * lineHeight;
+
+          if (charY < 0 || charY > canvas.height) continue;
+
+          // Head char is brighter
+          const isHead = j === 0;
+          const opacity = isHead ? 1 : 0.7 - j * 0.08;
+
+          if (isHead) {
+            // Head char - bright white/green
+            ctx.fillStyle = "rgba(200, 255, 220, 1)";
+            ctx.shadowColor = "rgba(0, 255, 157, 0.9)";
+            ctx.shadowBlur = 10;
+          } else {
+            ctx.fillStyle = col.color + Math.max(0.1, opacity) + ")";
+            ctx.shadowBlur = 0;
+          }
+
+          ctx.fillText(chars[j], x, charY);
+        }
+
+        // Move column down
+        col.y += col.speed;
+
+        // Reset when column exits screen
+        if (col.y > canvas.height + 100) {
+          col.y = -Math.random() * 300 - 100;
+          col.text =
+            codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+          col.useCode = Math.random() > 0.4;
+          col.speed = 0.5 + Math.random() * 1.5;
+          col.color =
+            columnColors[Math.floor(Math.random() * columnColors.length)];
+        }
+      }
+
+      ctx.shadowBlur = 0;
+      raf = requestAnimationFrame(draw);
+    };
+
+    draw();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed top-0 left-0 w-full h-full pointer-events-none"
+      style={{ zIndex: 0, opacity: 0.55 }}
+    />
+  );
+}

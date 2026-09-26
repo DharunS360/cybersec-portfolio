@@ -1,0 +1,361 @@
+import { personal } from "./portfolio";
+
+export const WELCOME = [
+  "┌─────────────────────────────────────────────────────┐",
+  "│  SOC-LAB Terminal — Blue Team Operations Console    │",
+  "│  Shift: ACTIVE  |  Analyst: Dharun S                │",
+  "│  Type 'help' to see available commands              │",
+  "└─────────────────────────────────────────────────────┘",
+  "",
+];
+
+export const commands = {
+  help: {
+    description: "Show all available commands",
+    execute: () => [
+      "SOC Commands:",
+      "",
+      "  help          → Show this menu",
+      "  whoami        → Analyst info",
+      "  shift         → Current shift status",
+      "  alerts        → Live alert queue",
+      "  triage        → Sample triage workflow",
+      "  hunt          → Threat hunting commands",
+      "  ioc <ip>      → Lookup IOC reputation",
+      "  mitre <id>    → MITRE ATT&CK technique info",
+      "  splunk        → Sample SPL query",
+      "  wazuh         → Wazuh agent status",
+      "  sysmon        → Sysmon event ID reference",
+      "  ir            → Incident response playbook",
+      "  report        → Generate shift report",
+      "  clear         → Clear terminal",
+      "  sudo hire-me  → 🚀",
+      "",
+      "Pro tip: Tab for autocomplete, ↑↓ for history",
+    ],
+  },
+
+  whoami: {
+    description: "Analyst info",
+    execute: () => [
+      "ANALYST PROFILE",
+      "─────────────────────────────",
+      `Name     : ${personal.name}`,
+      `Role     : ${personal.title}`,
+      `Location : ${personal.location}`,
+      "Status   : ACTIVE SHIFT",
+      "",
+      personal.subtitle,
+    ],
+  },
+
+  shift: {
+    description: "Current shift status",
+    execute: () => [
+      "SHIFT STATUS",
+      "─────────────────────────────",
+      "Analyst      : Dharun S",
+      "Shift        : DAY (08:00 - 20:00)",
+      "Queue Depth  : 3 alerts pending",
+      "Triaged      : 247 this shift",
+      "Escalated    : 12 to L2",
+      "MTTR         : 4m 32s avg",
+      "Status       : ● ONLINE",
+    ],
+  },
+
+  alerts: {
+    description: "Live alert queue",
+    execute: () => [
+      "ACTIVE ALERT QUEUE",
+      "─────────────────────────────────────────────",
+      "[CRIT] T1059.001  PowerShell abuse    — win10-victim",
+      "[HIGH] T1110      Brute force (SSH)   — linux-server01",
+      "[HIGH] T1071      C2 beacon detected  — 185.220.x.x",
+      "[MED]  T1566      Phishing email      — user@domain",
+      "[LOW]  T1046      Port scan           — 10.0.0.x",
+      "",
+      "3 pending · 247 triaged today · 12 escalated",
+    ],
+  },
+
+  triage: {
+    description: "Sample triage workflow",
+    execute: () => [
+      "TRIAGE WORKFLOW — Recent Alert",
+      "─────────────────────────────────────────────",
+      "Alert   : [HIGH] Brute Force Detected",
+      "Source  : 192.168.100.100 → win10-victim",
+      "Rule    : Wazuh #60122 (multiple failed logins)",
+      "MITRE   : T1110 - Brute Force",
+      "",
+      "Step 1: ✓ Verified alert (not false positive)",
+      "Step 2: ✓ Checked source IP reputation (VirusTotal)",
+      "Step 3: ✓ Confirmed account targeted (svc-backup)",
+      "Step 4: ✓ Blocked source IP at firewall",
+      "Step 5: ✓ Disabled targeted service account",
+      "Step 6: ✓ Escalated to L2 for deep investigation",
+      "Step 7: ✓ Documented in ticketing system",
+      "",
+      "Outcome: TRUE POSITIVE — Auto-mitigated + escalated",
+      "MTTR   : 6m 18s",
+    ],
+  },
+
+  hunt: {
+    description: "Threat hunting commands",
+    execute: () => [
+      "THREAT HUNTING QUERIES",
+      "─────────────────────────────────────────────",
+      "Common hunts:",
+      "",
+      "  1. Suspicious PowerShell execution",
+      "     index=win EventCode=4104 | where ScriptBlockText LIKE \"%IEX%\"",
+      "",
+      "  2. Lateral movement via SMB",
+      "     index=win EventCode=5140 ShareName=\"ADMIN$\"",
+      "",
+      "  3. Credential dumping attempt",
+      "     index=win EventCode=10 TargetImage=\"*lsass.exe*\"",
+      "",
+      "  4. Persistence via registry run keys",
+      "     index=win registry_path=\"*\\\\Run\\\\*\"",
+      "",
+      "  5. Living-off-the-land binaries",
+      "     index=win process_name IN (certutil.exe, bitsadmin.exe)",
+    ],
+  },
+
+  ioc: {
+    description: "IOC lookup",
+    execute: (args) => {
+      const ip = args[0] || "185.220.101.42";
+      return [
+        "IOC LOOKUP",
+        "─────────────────────────────────────────────",
+        `Query    : ${ip}`,
+        "Sources  : VirusTotal · AbuseIPDB · Shodan · MISP",
+        "",
+        "AbuseIPDB Score   : 98/100 (HIGH RISK)",
+        "VirusTotal        : 45/89 malicious",
+        "Known ASN         : AS200651 (malicious hosting)",
+        "Country           : Russia (RU)",
+        "Last Reported     : 2 hours ago",
+        "Threat Tags       : C2, Tor exit, Malware distribution",
+        "",
+        "▸ RECOMMENDATION: BLOCK at perimeter firewall",
+      ];
+    },
+  },
+
+  mitre: {
+    description: "MITRE ATT&CK info",
+    execute: (args) => {
+      const id = (args[0] || "T1110").toUpperCase();
+      const techniques = {
+        T1110: {
+          name: "Brute Force",
+          tactic: "Credential Access",
+          desc: "Adversaries may use brute force to gain access to accounts",
+          detect: "Event ID 4625 (failed login), 4740 (account lockout)",
+        },
+        "T1059.001": {
+          name: "PowerShell",
+          tactic: "Execution",
+          desc: "Adversaries may abuse PowerShell for execution",
+          detect: "Event 4104 (script block), Sysmon Event 1",
+        },
+        T1071: {
+          name: "Application Layer Protocol",
+          tactic: "Command and Control",
+          desc: "Adversaries may communicate using application layer protocols",
+          detect: "Network anomalies, unusual DNS, beacon patterns",
+        },
+      };
+      const t = techniques[id] || techniques.T1110;
+      return [
+        `MITRE ATT&CK: ${id}`,
+        "─────────────────────────────────────────────",
+        `Technique : ${t.name}`,
+        `Tactic    : ${t.tactic}`,
+        "",
+        `Description: ${t.desc}`,
+        "",
+        `Detection  : ${t.detect}`,
+        "",
+        "Reference  : https://attack.mitre.org/techniques/" + id + "/",
+      ];
+    },
+  },
+
+  splunk: {
+    description: "Sample SPL query",
+    execute: () => [
+      "SAMPLE SPLUNK QUERY",
+      "─────────────────────────────────────────────",
+      "index=windows EventCode=4625",
+      "| stats count by src_ip, user, ComputerName",
+      "| where count > 10",
+      "| sort -count",
+      "| lookup threat_intel src_ip OUTPUT threat_score",
+      "| where threat_score > 70",
+      "| table _time, src_ip, user, ComputerName, count, threat_score",
+      "",
+      "▸ Detects: Brute force attempts from high-risk IPs",
+      "▸ Uses  : Wazuh + Custom threat_intel lookup table",
+    ],
+  },
+
+  wazuh: {
+    description: "Wazuh agent status",
+    execute: () => [
+      "WAZUH AGENT STATUS",
+      "─────────────────────────────────────────────",
+      "Manager       : wazuh-server.local:1514",
+      "Status        : ● CONNECTED",
+      "Agents        : 4 active",
+      "  - win10-victim      (Windows) [ACTIVE]",
+      "  - linux-server01    (Ubuntu)  [ACTIVE]",
+      "  - kali-attacker     (Kali)    [ACTIVE]",
+      "  - docker-host       (Ubuntu)  [ACTIVE]",
+      "",
+      "Events/sec    : 12.4",
+      "Rules Loaded  : 2,847",
+      "Custom Rules  : 23",
+      "Alerts Today  : 247",
+    ],
+  },
+
+  sysmon: {
+    description: "Sysmon event IDs",
+    execute: () => [
+      "SYSMON EVENT ID REFERENCE",
+      "─────────────────────────────────────────────",
+      "  1  → Process Creation",
+      "  3  → Network Connection",
+      "  7  → Image Loaded",
+      "  8  → CreateRemoteThread (code injection)",
+      " 10  → ProcessAccess (LSASS access)",
+      " 11  → FileCreate",
+      " 12  → Registry Object Add/Delete",
+      " 13  → Registry Set Value",
+      " 15  → FileCreateStreamHash (ADS)",
+      " 22  → DNS Query",
+      " 23  → FileDelete (archived)",
+      "",
+      "▸ Config used: SwiftOnSecurity baseline + custom rules",
+    ],
+  },
+
+  ir: {
+    description: "Incident response playbook",
+    execute: () => [
+      "INCIDENT RESPONSE PLAYBOOK",
+      "─────────────────────────────────────────────",
+      "Phase 1 — Preparation",
+      "  ✓ SIEM + EDR deployed",
+      "  ✓ Playbooks documented",
+      "  ✓ Team contact list ready",
+      "",
+      "Phase 2 — Identification",
+      "  ✓ Alert triage → verify true/false positive",
+      "  ✓ Scope: how many hosts affected?",
+      "",
+      "Phase 3 — Containment",
+      "  ✓ Isolate affected endpoint (EDR)",
+      "  ✓ Block IOCs at firewall",
+      "  ✓ Disable compromised accounts",
+      "",
+      "Phase 4 — Eradication",
+      "  ✓ Remove malware artifacts",
+      "  ✓ Patch exploited vulnerability",
+      "",
+      "Phase 5 — Recovery",
+      "  ✓ Restore from clean backup",
+      "  ✓ Monitor for reinfection",
+      "",
+      "Phase 6 — Lessons Learned",
+      "  ✓ Update detection rules",
+      "  ✓ Document timeline",
+    ],
+  },
+
+  report: {
+    description: "Generate shift report",
+    execute: () => [
+      "SHIFT REPORT — 27 Sep 2026",
+      "─────────────────────────────────────────────",
+      "Analyst       : Dharun S (SOC L1)",
+      "Shift         : DAY 08:00 - 20:00",
+      "",
+      "METRICS",
+      "  Alerts Received   : 247",
+      "  Alerts Triaged    : 247",
+      "  True Positives    : 12",
+      "  Escalated to L2   : 12",
+      "  MTTR              : 4m 32s",
+      "",
+      "TOP THREATS",
+      "  1. Brute force (T1110)              — 45%",
+      "  2. Phishing (T1566)                 — 22%",
+      "  3. PowerShell abuse (T1059.001)     — 18%",
+      "  4. Port scan (T1046)                — 10%",
+      "  5. Other                            —  5%",
+      "",
+      "ACTION ITEMS",
+      "  ▸ Update Wazuh rules for new TTPs",
+      "  ▸ Add 3 IPs to perimeter blocklist",
+      "",
+      "Status: COMPLETE · Shift handed over to NIGHT",
+    ],
+  },
+
+  clear: {
+    description: "Clear terminal",
+    execute: () => "CLEAR",
+  },
+
+  "sudo hire-me": {
+    description: "🚀 Hire me!",
+    execute: () => [
+      "╔══════════════════════════════════════════════╗",
+      "║  🔥 INITIATING HIRE SEQUENCE...              ║",
+      "╚══════════════════════════════════════════════╝",
+      "",
+      "  ✓ Validating candidate...",
+      "  ✓ Checking SOC L1 readiness...  [READY]",
+      "  ✓ PenTest+ cert verified...     [ACTIVE]",
+      "  ✓ Blue team home lab...         [OPERATIONAL]",
+      "  ✓ Generating offer letter...",
+      "",
+      "  🎉 ACCESS GRANTED — CLEARANCE LEVEL: HIRE 🎉",
+      "",
+      `  → Contact: ${personal.email}`,
+      "  → Opening mail client...",
+      "",
+      "  Thank you for considering me! 🚀",
+    ],
+  },
+
+  ls: {
+    description: "List directories",
+    execute: () => [
+      "drwxr-xr-x  soc-lab/      projects/    skills/",
+      "drwxr-xr-x  incidents/    reports/     hunts/",
+      "drwxr-xr-x  playbooks/    iocs/        logs/",
+      "-rw-r--r--  resume.pdf    README.md",
+    ],
+  },
+
+  date: {
+    description: "Current date",
+    execute: () => [new Date().toString()],
+  },
+
+  echo: {
+    description: "Echo text",
+    execute: (args) => [args.join(" ") || ""],
+  },
+};
+
+export const commandNames = Object.keys(commands);
