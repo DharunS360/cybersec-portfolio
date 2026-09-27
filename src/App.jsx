@@ -24,6 +24,23 @@ import CRTWrapper from "./components/CRTWrapper";
 export default function App() {
   const [booted, setBooted] = useState(false);
 
+  // 🔥 Fix: Force scroll to top on every page load
+  useEffect(() => {
+    // Disable browser scroll restoration
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    // Scroll to top instantly
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Boot complete aana appuram, scroll to top again
+  useEffect(() => {
+    if (booted) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, [booted]);
+
   return (
     <>
       {!booted && <BootSequence onComplete={() => setBooted(true)} />}
@@ -40,45 +57,20 @@ export default function App() {
           <SoundToggle />
           <SOCDashboard />
 
-          {/* === MAIN CONTENT (proper order) === */}
+          {/* === MAIN CONTENT === */}
           <div className="relative z-10">
-            {/* 1. Navbar (fixed top) */}
             <Navbar />
-
-            {/* 2. Hero (Shield + Name + Terminal) */}
             <Hero />
-
-            {/* 3. Threat Feed (marquee) */}
             <ThreatFeed />
-
-            {/* 4. Terminal (interactive SOC console) */}
             <Terminal />
-
-            {/* 5. Attack Globe (3D earth) */}
             <AttackGlobe />
-
-            {/* 6. About (Avatar + Bio + Stats) */}
             <About />
-
-            {/* 7. Skills (Tabs: Grid | Graph | Tools) */}
             <Skills />
-
-            {/* 8. Labs (Tabs: SOC | Malware) */}
             <Labs />
-
-            {/* 9. Projects */}
             <Projects />
-
-            {/* 10. Certifications */}
             <Certifications />
-
-            {/* 11. Experience */}
             <Experience />
-
-            {/* 12. Contact */}
             <Contact />
-
-            {/* 13. Footer */}
             <Footer />
           </div>
         </div>

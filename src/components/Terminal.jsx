@@ -18,6 +18,7 @@ export default function Terminal() {
   const [input, setInput] = useState("");
   const [cmdHistory, setCmdHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const inputRef = useRef(null);
   const bodyRef = useRef(null);
   const containerRef = useRef(null);
@@ -57,6 +58,7 @@ export default function Terminal() {
 
   const focusInput = () => {
     if (inputRef.current) inputRef.current.focus();
+    setHasInteracted(true);
   };
 
   const handleCommand = (raw) => {
@@ -165,7 +167,7 @@ export default function Terminal() {
     <section
       ref={containerRef}
       id="terminal"
-      className="py-20 px-6 max-w-5xl mx-auto"
+      className="py-20 px-6 max-w-5xl mx-auto scroll-mt-24"
     >
       <div className="mb-8 text-center">
         <div className="inline-block px-3 py-1 rounded-full glass text-xs font-mono text-accent-blue mb-4">
@@ -239,7 +241,6 @@ export default function Terminal() {
               value={input}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              autoFocus
               spellCheck={false}
               autoComplete="off"
               className="flex-1 bg-transparent outline-none text-white caret-accent-blue font-mono"
