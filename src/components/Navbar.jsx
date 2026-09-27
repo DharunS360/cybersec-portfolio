@@ -5,6 +5,7 @@ import { FiTerminal } from "react-icons/fi";
 import useScramble from "../hooks/useScramble";
 import useSound from "../hooks/useSound";
 
+// Navbar links — ordered by section appearance
 const links = [
   { name: "about", href: "#about" },
   { name: "skills", href: "#skills" },
@@ -18,6 +19,17 @@ const links = [
 function NavLink({ name, href, onHoverSound, onClickSound }) {
   const { display, scramble } = useScramble(name, { trigger: "hover" });
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    onClickSound();
+    const el = document.querySelector(href);
+    if (el) {
+      const offset = 80; // navbar height offset
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <a
       href={href}
@@ -25,7 +37,7 @@ function NavLink({ name, href, onHoverSound, onClickSound }) {
         scramble();
         onHoverSound();
       }}
-      onClick={onClickSound}
+      onClick={handleClick}
       className="text-gray-300 hover:text-accent-blue font-mono text-sm transition relative group"
     >
       <span className="text-accent-blue">#</span>
@@ -44,12 +56,13 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
+
       const sections = links.map((l) => l.href.slice(1));
       const current = sections.find((id) => {
         const el = document.getElementById(id);
         if (!el) return false;
         const rect = el.getBoundingClientRect();
-        return rect.top <= 120 && rect.bottom >= 120;
+        return rect.top <= 150 && rect.bottom >= 150;
       });
       setActive(current || "");
     };
@@ -57,6 +70,12 @@ export default function Navbar() {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    click();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <nav
@@ -67,7 +86,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group">
+        {/* Logo — scroll to top */}
+        <a
+          href="#"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 group cursor-pointer"
+        >
           <div className="w-8 h-8 rounded-md glass flex items-center justify-center text-accent-blue group-hover:animate-glow-blue transition">
             <FiTerminal size={14} />
           </div>
@@ -81,6 +105,7 @@ export default function Navbar() {
           </span>
         </a>
 
+        {/* Desktop nav links */}
         <div className="hidden lg:flex items-center gap-6">
           {links.map((l) => (
             <NavLink
@@ -92,6 +117,7 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Status + Mobile toggle */}
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-gray-400">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -110,15 +136,24 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden glass-strong mt-3 mx-4 rounded-xl p-4 flex flex-col gap-3 animate-fade-in-up">
           {links.map((l) => (
             <a
               key={l.name}
               href={l.href}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 click();
                 setOpen(false);
+                const el = document.querySelector(l.href);
+                if (el) {
+                  const offset = 80;
+                  const top =
+                    el.getBoundingClientRect().top + window.scrollY - offset;
+                  window.scrollTo({ top, behavior: "smooth" });
+                }
               }}
               className={`font-mono text-sm py-2 px-3 rounded-md transition ${
                 active === l.href.slice(1)
