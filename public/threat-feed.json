@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-10-02T16:56:13.287092+00:00",
+  "lastUpdated": "2026-10-02T21:30:53.857991+00:00",
   "source": "abuse.ch",
   "feeds": [
     "feodo_tracker",
     "urlhaus",
     "threatfox"
   ],
-  "totalIPs": 2484,
+  "totalIPs": 2482,
   "locations": [
     {
       "ip": "162.243.103.246",
@@ -15,9 +15,9 @@
       "city": "Singapore",
       "lat": 1.3521,
       "lng": 103.8198,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
     },
     {
       "ip": "50.16.16.211",
@@ -26,9 +26,9 @@
       "city": "Tokyo",
       "lat": 35.6762,
       "lng": 139.6503,
-      "type": "Botnet",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#ff3b3b"
+      "color": "#ff9500"
     },
     {
       "ip": "34.204.119.63",
@@ -37,9 +37,9 @@
       "city": "London",
       "lat": 51.5074,
       "lng": -0.1278,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "178.62.3.223",
@@ -59,100 +59,34 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Malware C2",
+      "type": "Ransomware",
       "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "115.55.23.171",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Singapore",
-      "lat": 1.3521,
-      "lng": 103.8198,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "175.165.83.136",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Frankfurt",
-      "lat": 50.1109,
-      "lng": 8.6821,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "27.215.78.29",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "5.167.65.75",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "59.180.148.204",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Sao Paulo",
-      "lat": -23.5505,
-      "lng": -46.6333,
-      "type": "Botnet",
-      "severity": "HIGH",
       "color": "#ff3b3b"
     },
     {
-      "ip": "221.202.230.86",
+      "ip": "217.145.72.196",
       "malware": "Malicious URL",
       "source": "urlhaus",
-      "city": "Hong Kong",
-      "lat": 22.3193,
-      "lng": 114.1694,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "115.56.156.34",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Tokyo",
-      "lat": 35.6762,
-      "lng": 139.6503,
+      "city": "Seoul",
+      "lat": 37.5665,
+      "lng": 126.978,
       "type": "Malware",
       "severity": "HIGH",
       "color": "#00d4ff"
     },
     {
-      "ip": "219.155.202.2",
+      "ip": "176.65.139.78",
       "malware": "Malicious URL",
       "source": "urlhaus",
-      "city": "Sydney",
-      "lat": -33.8688,
-      "lng": 151.2093,
-      "type": "Malware",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff9500"
     },
     {
-      "ip": "222.137.147.93",
+      "ip": "115.49.20.207",
       "malware": "Malicious URL",
       "source": "urlhaus",
       "city": "Mumbai",
@@ -163,7 +97,18 @@
       "color": "#a855f7"
     },
     {
-      "ip": "103.31.103.204",
+      "ip": "115.61.47.213",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "182.127.69.67",
       "malware": "Malicious URL",
       "source": "urlhaus",
       "city": "Sydney",
@@ -174,12 +119,485 @@
       "color": "#ff9500"
     },
     {
-      "ip": "36.69.88.61",
+      "ip": "222.127.49.242",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "105.186.99.138",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Amsterdam",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "175.148.154.114",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "42.226.78.24",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hong Kong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "177.36.24.217",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "182.121.152.52",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hanoi",
+      "lat": 21.0285,
+      "lng": 105.8542,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "103.111.23.11",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "27.206.184.220",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hong Kong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "123.14.58.117",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.389,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "196.189.198.173",
       "malware": "Malicious URL",
       "source": "urlhaus",
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "31.56.209.73",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "60.19.209.10",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "42.226.64.166",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hong Kong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "117.190.134.251",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.389,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "91.92.242.236",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "170.254.10.219",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Pyongyang",
+      "lat": 39.0392,
+      "lng": 125.7625,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "109.238.87.111",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.389,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "39.80.60.21",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sao Paulo",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "176.65.139.160",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "94.154.43.203",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hong Kong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "31.76.61.78",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "101.59.79.119",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Singapore",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "115.55.54.132",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Singapore",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "220.161.160.97",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "115.57.199.235",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Seoul",
+      "lat": 37.5665,
+      "lng": 126.978,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "77.79.160.210",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Istanbul",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "217.60.195.187",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "175.149.91.64",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Mumbai",
+      "lat": 19.076,
+      "lng": 72.8777,
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "193.26.115.64",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Pyongyang",
+      "lat": 39.0392,
+      "lng": 125.7625,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "178.16.52.209",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sao Paulo",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "160.179.255.198",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "112.242.231.62",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Pyongyang",
+      "lat": 39.0392,
+      "lng": 125.7625,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "42.176.197.73",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "36.69.66.206",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Frankfurt",
+      "lat": 50.1109,
+      "lng": 8.6821,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "125.44.252.89",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sao Paulo",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "103.125.31.101",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hanoi",
+      "lat": 21.0285,
+      "lng": 105.8542,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "113.236.122.119",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Sao Paulo",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "180.191.20.148",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Istanbul",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "112.198.179.93",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Kyiv",
+      "lat": 50.4501,
+      "lng": 30.5234,
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "221.15.189.1",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Istanbul",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "178.74.91.108",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.389,
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "42.235.167.45",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Paris",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "222.141.2.255",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Hanoi",
+      "lat": 21.0285,
+      "lng": 105.8542,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "217.60.195.87",
+      "malware": "Malicious URL",
+      "source": "urlhaus",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
       "type": "Malware C2",
       "severity": "CRIT",
       "color": "#a855f7"
@@ -196,108 +614,53 @@
       "color": "#ff9500"
     },
     {
-      "ip": "123.14.186.187",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Tehran",
-      "lat": 35.6892,
-      "lng": 51.389,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "36.64.184.26",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "42.57.40.143",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Mumbai",
-      "lat": 19.076,
-      "lng": 72.8777,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "198.12.126.187",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
+      "ip": "34.237.159.252",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
       "type": "Phishing",
       "severity": "MED",
       "color": "#ff9500"
     },
     {
-      "ip": "139.144.210.113",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "119.187.177.158",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Istanbul",
-      "lat": 41.0082,
-      "lng": 28.9784,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "182.127.115.80",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Sydney",
-      "lat": -33.8688,
-      "lng": 151.2093,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "83.219.1.198",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
+      "ip": "147.45.116.124",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Seoul",
+      "lat": 37.5665,
+      "lng": 126.978,
       "type": "Malware C2",
       "severity": "CRIT",
       "color": "#a855f7"
     },
     {
-      "ip": "182.122.242.126",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Pyongyang",
-      "lat": 39.0392,
-      "lng": 125.7625,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "ip": "154.92.252.61",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Tokyo",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
-      "ip": "27.206.184.220",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "154.92.252.59",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Tokyo",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "128.90.113.45",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Hong Kong",
       "lat": 22.3193,
       "lng": 114.1694,
@@ -306,9 +669,31 @@
       "color": "#00d4ff"
     },
     {
-      "ip": "42.235.36.159",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "147.45.116.125",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Seoul",
+      "lat": 37.5665,
+      "lng": 126.978,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "78.153.155.29",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "89.23.113.104",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Paris",
       "lat": 48.8566,
       "lng": 2.3522,
@@ -317,64 +702,152 @@
       "color": "#00d4ff"
     },
     {
-      "ip": "221.1.225.141",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Seoul",
-      "lat": 37.5665,
-      "lng": 126.978,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "180.190.240.131",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "180.190.203.41",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
-      "type": "Botnet",
+      "ip": "154.89.152.200",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Hanoi",
+      "lat": 21.0285,
+      "lng": 105.8542,
+      "type": "Malware",
       "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "154.92.252.60",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Tokyo",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Ransomware",
+      "severity": "CRIT",
       "color": "#ff3b3b"
     },
     {
-      "ip": "103.126.201.130",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Pyongyang",
-      "lat": 39.0392,
-      "lng": 125.7625,
+      "ip": "91.92.41.66",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
       "type": "Phishing",
       "severity": "MED",
       "color": "#ff9500"
     },
     {
-      "ip": "218.16.164.103",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Sao Paulo",
-      "lat": -23.5505,
-      "lng": -46.6333,
+      "ip": "91.92.41.92",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "46.246.84.19",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Tehran",
+      "lat": 35.6892,
+      "lng": 51.389,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "40.160.135.244",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Moscow",
+      "lat": 55.7558,
+      "lng": 37.6173,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "31.56.209.82",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "23.132.164.72",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Moscow",
+      "lat": 55.7558,
+      "lng": 37.6173,
       "type": "Ransomware",
       "severity": "CRIT",
       "color": "#ff3b3b"
     },
     {
-      "ip": "42.229.166.105",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "217.60.102.47",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Bucharest",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "216.250.252.103",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Amsterdam",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "2.59.132.206",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Istanbul",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "2.27.13.90",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "160.179.238.25",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "150.241.226.20",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Beijing",
       "lat": 39.9042,
       "lng": 116.4074,
@@ -383,86 +856,20 @@
       "color": "#ff9500"
     },
     {
-      "ip": "180.190.202.146",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
+      "ip": "13.143.247.153",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Istanbul",
+      "lat": 41.0082,
+      "lng": 28.9784,
       "type": "Malware C2",
       "severity": "CRIT",
       "color": "#a855f7"
     },
     {
-      "ip": "60.22.148.175",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Tehran",
-      "lat": 35.6892,
-      "lng": 51.389,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "123.14.247.181",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Tehran",
-      "lat": 35.6892,
-      "lng": 51.389,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "203.12.31.75",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "123.5.125.157",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Hanoi",
-      "lat": 21.0285,
-      "lng": 105.8542,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "79.36.217.100",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "223.151.253.6",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Sydney",
-      "lat": -33.8688,
-      "lng": 151.2093,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "180.243.176.58",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "109.199.114.141",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
@@ -471,147 +878,92 @@
       "color": "#ff3b3b"
     },
     {
-      "ip": "61.53.85.131",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Mumbai",
-      "lat": 19.076,
-      "lng": 72.8777,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "119.185.189.113",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Mumbai",
-      "lat": 19.076,
-      "lng": 72.8777,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "60.23.154.251",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "104.239.66.182",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "115.50.253.9",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "27.28.99.89",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "175.146.231.178",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Amsterdam",
-      "lat": 52.3676,
-      "lng": 4.9041,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "195.178.110.48",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Hong Kong",
-      "lat": 22.3193,
-      "lng": 114.1694,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "124.94.244.141",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Hong Kong",
-      "lat": 22.3193,
-      "lng": 114.1694,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "123.189.177.133",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Seoul",
-      "lat": 37.5665,
-      "lng": 126.978,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "176.194.109.14",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
       "type": "Ransomware",
       "severity": "CRIT",
       "color": "#ff3b3b"
     },
     {
-      "ip": "116.138.109.113",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "Pyongyang",
-      "lat": 39.0392,
-      "lng": 125.7625,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "61.52.3.238",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "119.187.177.77",
-      "malware": "Malicious URL",
-      "source": "urlhaus",
+      "ip": "141.255.166.178",
+      "malware": "botnet_cc",
+      "source": "threatfox",
       "city": "Istanbul",
       "lat": 41.0082,
       "lng": 28.9784,
       "type": "Ransomware",
       "severity": "CRIT",
       "color": "#ff3b3b"
+    },
+    {
+      "ip": "49.235.134.179",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Sydney",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "8.137.35.137",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Frankfurt",
+      "lat": 50.1109,
+      "lng": 8.6821,
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
+    },
+    {
+      "ip": "102.117.170.218",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Mumbai",
+      "lat": 19.076,
+      "lng": 72.8777,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
+    },
+    {
+      "ip": "124.221.179.152",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Frankfurt",
+      "lat": 50.1109,
+      "lng": 8.6821,
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
+    },
+    {
+      "ip": "153.80.242.105",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "London",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
+    },
+    {
+      "ip": "120.53.84.98",
+      "malware": "botnet_cc",
+      "source": "threatfox",
+      "city": "Hanoi",
+      "lat": 21.0285,
+      "lng": 105.8542,
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
     },
     {
       "ip": "167.172.71.210",
@@ -631,9 +983,9 @@
       "city": "Mumbai",
       "lat": 19.076,
       "lng": 72.8777,
-      "type": "Malware",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff9500"
     },
     {
       "ip": "186.169.33.226",
@@ -642,9 +994,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
     },
     {
       "ip": "124.222.21.29",
@@ -653,20 +1005,9 @@
       "city": "Amsterdam",
       "lat": 52.3676,
       "lng": 4.9041,
-      "type": "Exploit",
+      "type": "Malware",
       "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "153.80.242.105",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
+      "color": "#00d4ff"
     },
     {
       "ip": "180.93.125.137",
@@ -675,9 +1016,9 @@
       "city": "Hanoi",
       "lat": 21.0285,
       "lng": 105.8542,
-      "type": "Malware C2",
+      "type": "Ransomware",
       "severity": "CRIT",
-      "color": "#a855f7"
+      "color": "#ff3b3b"
     },
     {
       "ip": "87.251.69.144",
@@ -686,9 +1027,9 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "41.142.103.28",
@@ -697,9 +1038,9 @@
       "city": "Hong Kong",
       "lat": 22.3193,
       "lng": 114.1694,
-      "type": "Ransomware",
+      "type": "Malware C2",
       "severity": "CRIT",
-      "color": "#ff3b3b"
+      "color": "#a855f7"
     },
     {
       "ip": "198.13.47.210",
@@ -708,9 +1049,9 @@
       "city": "Beijing",
       "lat": 39.9042,
       "lng": 116.4074,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "185.236.203.101",
@@ -719,9 +1060,9 @@
       "city": "Tokyo",
       "lat": 35.6762,
       "lng": 139.6503,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
     },
     {
       "ip": "87.251.69.145",
@@ -730,8 +1071,8 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Exploit",
-      "severity": "HIGH",
+      "type": "Phishing",
+      "severity": "MED",
       "color": "#ff9500"
     },
     {
@@ -741,9 +1082,9 @@
       "city": "Mumbai",
       "lat": 19.076,
       "lng": 72.8777,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "87.251.69.138",
@@ -752,9 +1093,9 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "87.251.69.165",
@@ -763,9 +1104,9 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
     },
     {
       "ip": "5.181.2.72",
@@ -774,9 +1115,9 @@
       "city": "Beijing",
       "lat": 39.9042,
       "lng": 116.4074,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
     },
     {
       "ip": "159.75.202.228",
@@ -785,20 +1126,9 @@
       "city": "Sydney",
       "lat": -33.8688,
       "lng": 151.2093,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "141.255.166.178",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Istanbul",
-      "lat": 41.0082,
-      "lng": 28.9784,
-      "type": "Exploit",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#ff3b3b"
     },
     {
       "ip": "46.151.182.182",
@@ -807,9 +1137,9 @@
       "city": "Paris",
       "lat": 48.8566,
       "lng": 2.3522,
-      "type": "Botnet",
+      "type": "Malware",
       "severity": "HIGH",
-      "color": "#ff3b3b"
+      "color": "#00d4ff"
     },
     {
       "ip": "159.89.28.205",
@@ -818,8 +1148,8 @@
       "city": "Hanoi",
       "lat": 21.0285,
       "lng": 105.8542,
-      "type": "Ransomware",
-      "severity": "CRIT",
+      "type": "Botnet",
+      "severity": "HIGH",
       "color": "#ff3b3b"
     },
     {
@@ -829,9 +1159,9 @@
       "city": "Paris",
       "lat": 48.8566,
       "lng": 2.3522,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "154.219.114.14",
@@ -840,9 +1170,9 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "156.223.213.38",
@@ -851,8 +1181,8 @@
       "city": "Sydney",
       "lat": -33.8688,
       "lng": 151.2093,
-      "type": "Botnet",
-      "severity": "HIGH",
+      "type": "Ransomware",
+      "severity": "CRIT",
       "color": "#ff3b3b"
     },
     {
@@ -862,9 +1192,9 @@
       "city": "Amsterdam",
       "lat": 52.3676,
       "lng": 4.9041,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "188.132.242.67",
@@ -873,9 +1203,9 @@
       "city": "Moscow",
       "lat": 55.7558,
       "lng": 37.6173,
-      "type": "Malware",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff9500"
     },
     {
       "ip": "47.95.201.24",
@@ -884,9 +1214,9 @@
       "city": "Paris",
       "lat": 48.8566,
       "lng": 2.3522,
-      "type": "Exploit",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#ff3b3b"
     },
     {
       "ip": "47.113.98.42",
@@ -895,9 +1225,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
     },
     {
       "ip": "223.109.142.7",
@@ -917,9 +1247,9 @@
       "city": "London",
       "lat": 51.5074,
       "lng": -0.1278,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
     },
     {
       "ip": "81.169.151.12",
@@ -928,9 +1258,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Botnet",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#ff3b3b"
+      "color": "#ff9500"
     },
     {
       "ip": "78.46.206.8",
@@ -939,8 +1269,8 @@
       "city": "Pyongyang",
       "lat": 39.0392,
       "lng": 125.7625,
-      "type": "Botnet",
-      "severity": "HIGH",
+      "type": "Ransomware",
+      "severity": "CRIT",
       "color": "#ff3b3b"
     },
     {
@@ -950,9 +1280,9 @@
       "city": "Beijing",
       "lat": 39.9042,
       "lng": 116.4074,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "103.239.168.12",
@@ -961,9 +1291,9 @@
       "city": "Paris",
       "lat": 48.8566,
       "lng": 2.3522,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
     },
     {
       "ip": "82.25.12.111",
@@ -983,9 +1313,9 @@
       "city": "Tehran",
       "lat": 35.6892,
       "lng": 51.389,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "45.202.1.16",
@@ -994,9 +1324,9 @@
       "city": "Tehran",
       "lat": 35.6892,
       "lng": 51.389,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "212.192.14.31",
@@ -1005,9 +1335,9 @@
       "city": "Sao Paulo",
       "lat": -23.5505,
       "lng": -46.6333,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "89.185.82.37",
@@ -1027,9 +1357,9 @@
       "city": "London",
       "lat": 51.5074,
       "lng": -0.1278,
-      "type": "Malware C2",
+      "type": "Ransomware",
       "severity": "CRIT",
-      "color": "#a855f7"
+      "color": "#ff3b3b"
     },
     {
       "ip": "109.74.144.151",
@@ -1038,9 +1368,9 @@
       "city": "Hong Kong",
       "lat": 22.3193,
       "lng": 114.1694,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "92.51.46.35",
@@ -1049,9 +1379,9 @@
       "city": "Ashburn",
       "lat": 39.0438,
       "lng": -77.4874,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
+      "type": "Phishing",
+      "severity": "MED",
+      "color": "#ff9500"
     },
     {
       "ip": "78.17.25.46",
@@ -1060,9 +1390,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Malware",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff9500"
     },
     {
       "ip": "64.177.45.143",
@@ -1071,9 +1401,9 @@
       "city": "Beijing",
       "lat": 39.9042,
       "lng": 116.4074,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
     },
     {
       "ip": "45.93.95.212",
@@ -1082,9 +1412,9 @@
       "city": "Hanoi",
       "lat": 21.0285,
       "lng": 105.8542,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
+      "type": "Malware C2",
+      "severity": "CRIT",
+      "color": "#a855f7"
     },
     {
       "ip": "45.135.119.121",
@@ -1093,9 +1423,9 @@
       "city": "Singapore",
       "lat": 1.3521,
       "lng": 103.8198,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Exploit",
+      "severity": "HIGH",
+      "color": "#ff9500"
     },
     {
       "ip": "45.139.104.199",
@@ -1104,9 +1434,9 @@
       "city": "Sydney",
       "lat": -33.8688,
       "lng": 151.2093,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "31.56.19.40",
@@ -1115,9 +1445,9 @@
       "city": "Bucharest",
       "lat": 44.4268,
       "lng": 26.1025,
-      "type": "Ransomware",
+      "type": "Malware C2",
       "severity": "CRIT",
-      "color": "#ff3b3b"
+      "color": "#a855f7"
     },
     {
       "ip": "217.60.184.45",
@@ -1126,9 +1456,9 @@
       "city": "Bucharest",
       "lat": 44.4268,
       "lng": 26.1025,
-      "type": "Exploit",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#ff3b3b"
     },
     {
       "ip": "216.203.20.87",
@@ -1137,9 +1467,9 @@
       "city": "Sydney",
       "lat": -33.8688,
       "lng": 151.2093,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     },
     {
       "ip": "207.57.162.48",
@@ -1148,9 +1478,9 @@
       "city": "Mumbai",
       "lat": 19.076,
       "lng": 72.8777,
-      "type": "Exploit",
+      "type": "Malware",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#00d4ff"
     },
     {
       "ip": "207.57.163.104",
@@ -1181,9 +1511,9 @@
       "city": "Bucharest",
       "lat": 44.4268,
       "lng": 26.1025,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "180.76.97.85",
@@ -1192,8 +1522,8 @@
       "city": "Tokyo",
       "lat": 35.6762,
       "lng": 139.6503,
-      "type": "Phishing",
-      "severity": "MED",
+      "type": "Exploit",
+      "severity": "HIGH",
       "color": "#ff9500"
     },
     {
@@ -1225,8 +1555,8 @@
       "city": "Amsterdam",
       "lat": 52.3676,
       "lng": 4.9041,
-      "type": "Phishing",
-      "severity": "MED",
+      "type": "Exploit",
+      "severity": "HIGH",
       "color": "#ff9500"
     },
     {
@@ -1236,9 +1566,9 @@
       "city": "Kyiv",
       "lat": 50.4501,
       "lng": 30.5234,
-      "type": "Exploit",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#ff3b3b"
     },
     {
       "ip": "120.79.146.35",
@@ -1258,9 +1588,9 @@
       "city": "Mumbai",
       "lat": 19.076,
       "lng": 72.8777,
-      "type": "Exploit",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#ff3b3b"
     },
     {
       "ip": "89.185.82.39",
@@ -1269,8 +1599,8 @@
       "city": "Mumbai",
       "lat": 19.076,
       "lng": 72.8777,
-      "type": "Ransomware",
-      "severity": "CRIT",
+      "type": "Botnet",
+      "severity": "HIGH",
       "color": "#ff3b3b"
     },
     {
@@ -1280,9 +1610,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
     },
     {
       "ip": "144.172.85.64",
@@ -1291,9 +1621,9 @@
       "city": "Tokyo",
       "lat": 35.6762,
       "lng": 139.6503,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
+      "type": "Malware",
+      "severity": "HIGH",
+      "color": "#00d4ff"
     },
     {
       "ip": "191.124.5.50",
@@ -1302,9 +1632,9 @@
       "city": "Moscow",
       "lat": 55.7558,
       "lng": 37.6173,
-      "type": "Exploit",
+      "type": "Malware",
       "severity": "HIGH",
-      "color": "#ff9500"
+      "color": "#00d4ff"
     },
     {
       "ip": "161.35.146.120",
@@ -1313,9 +1643,9 @@
       "city": "Istanbul",
       "lat": 41.0082,
       "lng": 28.9784,
-      "type": "Botnet",
+      "type": "Malware",
       "severity": "HIGH",
-      "color": "#ff3b3b"
+      "color": "#00d4ff"
     },
     {
       "ip": "45.146.91.241",
@@ -1324,336 +1654,6 @@
       "city": "Amsterdam",
       "lat": 52.3676,
       "lng": 4.9041,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "72.60.189.171",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Bucharest",
-      "lat": 44.4268,
-      "lng": 26.1025,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "185.215.151.9",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Singapore",
-      "lat": 1.3521,
-      "lng": 103.8198,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "172.236.132.235",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "52.36.201.99",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "172.236.129.220",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "159.223.24.190",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "204.44.69.213",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "93.113.180.149",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Beijing",
-      "lat": 39.9042,
-      "lng": 116.4074,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "134.122.126.123",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Amsterdam",
-      "lat": 52.3676,
-      "lng": 4.9041,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "5.181.2.75",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Beijing",
-      "lat": 39.9042,
-      "lng": 116.4074,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "128.90.106.115",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Hong Kong",
-      "lat": 22.3193,
-      "lng": 114.1694,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "172.245.89.137",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Seoul",
-      "lat": 37.5665,
-      "lng": 126.978,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "217.144.185.101",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Tokyo",
-      "lat": 35.6762,
-      "lng": 139.6503,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "138.124.60.214",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Bucharest",
-      "lat": 44.4268,
-      "lng": 26.1025,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "193.233.201.114",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Beijing",
-      "lat": 39.9042,
-      "lng": 116.4074,
-      "type": "Malware C2",
-      "severity": "CRIT",
-      "color": "#a855f7"
-    },
-    {
-      "ip": "194.26.192.83",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "185.196.8.142",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Tokyo",
-      "lat": 35.6762,
-      "lng": 139.6503,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "45.131.215.56",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Istanbul",
-      "lat": 41.0082,
-      "lng": 28.9784,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "203.88.118.26",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Tokyo",
-      "lat": 35.6762,
-      "lng": 139.6503,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "185.33.86.141",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Hanoi",
-      "lat": 21.0285,
-      "lng": 105.8542,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "45.130.167.184",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Kyiv",
-      "lat": 50.4501,
-      "lng": 30.5234,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "207.148.73.17",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "196.251.121.120",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "152.67.199.142",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Sydney",
-      "lat": -33.8688,
-      "lng": 151.2093,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "137.184.126.9",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Tokyo",
-      "lat": 35.6762,
-      "lng": 139.6503,
-      "type": "Ransomware",
-      "severity": "CRIT",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "43.139.9.82",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Paris",
-      "lat": 48.8566,
-      "lng": 2.3522,
-      "type": "Malware",
-      "severity": "HIGH",
-      "color": "#00d4ff"
-    },
-    {
-      "ip": "68.178.202.150",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Amsterdam",
-      "lat": 52.3676,
-      "lng": 4.9041,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "192.169.176.54",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Beijing",
-      "lat": 39.9042,
-      "lng": 116.4074,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
-    },
-    {
-      "ip": "82.156.242.28",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "London",
-      "lat": 51.5074,
-      "lng": -0.1278,
-      "type": "Botnet",
-      "severity": "HIGH",
-      "color": "#ff3b3b"
-    },
-    {
-      "ip": "154.36.164.137",
-      "malware": "botnet_cc",
-      "source": "threatfox",
-      "city": "Moscow",
-      "lat": 55.7558,
-      "lng": 37.6173,
       "type": "Botnet",
       "severity": "HIGH",
       "color": "#ff3b3b"
