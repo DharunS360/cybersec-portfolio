@@ -4,7 +4,6 @@ import {
   labStack,
   labScenarios,
   labMetrics,
-  roadmap,
 } from "../data/homeLab";
 import {
   FiServer,
@@ -13,7 +12,6 @@ import {
   FiShield,
   FiZap,
   FiCheckCircle,
-  FiClock,
 } from "react-icons/fi";
 
 const ICON_MAP = {
@@ -176,65 +174,7 @@ export default function HomeLab({ embedded = false }) {
         </div>
       </div>
 
-      {/* Roadmap */}
-      <div>
-        <h3 className="text-xl font-bold text-white mb-5 flex items-center gap-2">
-          <span className="text-accent-blue font-mono">$</span> Build Roadmap
-        </h3>
-        <div className="glass rounded-xl p-6 border border-accent-blue/20">
-          <div className="space-y-3">
-            {roadmap.map((r) => {
-              const isDone = r.status === "complete";
-              const isInProgress = r.status === "in-progress";
-              return (
-                <div
-                  key={r.phase}
-                  className="flex items-center gap-4 py-2 border-b border-accent-blue/10 last:border-0"
-                >
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-xs font-bold font-mono"
-                    style={{
-                      background: isDone
-                        ? "#00ff9d20"
-                        : isInProgress
-                        ? "#00bfff20"
-                        : "rgba(107,114,128,0.1)",
-                      color: isDone
-                        ? "#00ff9d"
-                        : isInProgress
-                        ? "#00bfff"
-                        : "#6b7280",
-                      border:
-                        "1px solid " +
-                        (isDone
-                          ? "#00ff9d60"
-                          : isInProgress
-                          ? "#00bfff60"
-                          : "rgba(107,114,128,0.3)"),
-                    }}
-                  >
-                    {r.phase}
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-white font-medium">
-                      {r.title}
-                    </div>
-                  </div>
-                  <div className="text-xs">
-                    {isDone ? (
-                      <FiCheckCircle className="text-accent" />
-                    ) : isInProgress ? (
-                      <FiClock className="text-accent-blue animate-pulse" />
-                    ) : (
-                      <FiClock className="text-gray-600" />
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+      {/* Roadmap REMOVED */}
     </>
   );
 
@@ -243,7 +183,7 @@ export default function HomeLab({ embedded = false }) {
   }
 
   return (
-    <section id="lab" className="py-20 px-6 max-w-6xl mx-auto">
+    <section id="lab" className="py-20 px-6 max-w-6xl mx-auto scroll-mt-24">
       <div className="text-center mb-12">
         <div className="inline-block px-3 py-1 rounded-full glass text-xs font-mono text-accent-blue mb-4">
           <span className="w-2 h-2 inline-block rounded-full bg-accent-blue animate-pulse mr-2" />

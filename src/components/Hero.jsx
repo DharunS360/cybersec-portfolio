@@ -10,14 +10,12 @@ import useIsMobile from "../hooks/useIsMobile";
 import GlitchText from "./GlitchText";
 import RansomText from "./RansomText";
 import Hero3D from "./three/Hero3D";
-import SOCPanel from "./SOCPanel";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const heroRef = useRef(null);
   const titleRef = useRef(null);
-  const terminalRef = useRef(null);
   const { click, hover } = useSound();
   const isMobile = useIsMobile();
 
@@ -31,27 +29,8 @@ export default function Hero() {
         );
       }
 
-      if (terminalRef.current) {
-        gsap.fromTo(
-          terminalRef.current,
-          { x: 80, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1.2, delay: 0.4, ease: "power3.out" }
-        );
-      }
-
       gsap.to(titleRef.current, {
         y: -100,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      gsap.to(terminalRef.current, {
-        y: -150,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
@@ -68,7 +47,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-32 pb-16"
+      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-24 pb-12"
     >
       {!isMobile && (
         <div className="absolute inset-0 z-0">
@@ -79,15 +58,8 @@ export default function Hero() {
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none z-[1]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(0,191,255,0.12),transparent_60%)] pointer-events-none z-[1]" />
 
-      {/* SOC Monitor — right side to avoid title collision */}
-      {!isMobile && (
-        <div className="hidden xl:block absolute top-24 right-6 z-20">
-          <SOCPanel />
-        </div>
-      )}
-
-      <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <div ref={titleRef}>
+      <div className="max-w-7xl w-full flex items-center justify-center relative z-10">
+        <div ref={titleRef} className="max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,7 +70,7 @@ export default function Hero() {
             <span>blue team · available for opportunities</span>
           </motion.div>
 
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4 justify-center">
             <div className="barcode-deco" />
             <span className="text-[10px] font-mono text-gray-500 rotate-label">
               /// SOC_L1 /// 2026 ///
@@ -110,7 +82,7 @@ export default function Hero() {
             <span className="inline-block w-2 h-4 bg-accent-blue ml-1 animate-pulse align-middle" />
           </p>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
             <GlitchText
               text={personal.firstName}
               intensity="low"
@@ -131,16 +103,16 @@ export default function Hero() {
               2000,
             ]}
             wrapper="p"
-            className="text-xl md:text-2xl text-accent-cyan font-mono mb-6"
+            className="text-2xl md:text-3xl text-accent-cyan font-mono mb-8"
             repeat={Infinity}
           />
 
-          <p className="text-gray-400 mb-8 max-w-lg leading-relaxed">
+          <p className="text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed text-lg">
             {personal.subtitle} — monitoring, detecting, and defending the
             digital frontier from {personal.location}.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 mb-10 justify-center">
             <a
               href={personal.resume}
               download
@@ -161,7 +133,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-center">
             <span className="text-xs font-mono text-gray-500">$ connect:</span>
             <a
               href={personal.github}
@@ -183,52 +155,6 @@ export default function Hero() {
             >
               <FiLinkedin />
             </a>
-          </div>
-        </div>
-
-        <div ref={terminalRef} className="relative">
-          <div className="glass-strong rounded-xl p-5 font-mono text-sm shadow-2xl relative overflow-hidden scan-container">
-            <div className="flex items-center justify-between mb-4 pb-3 border-b border-accent-blue/10">
-              <div className="flex gap-2">
-                <span className="w-3 h-3 rounded-full bg-red-500" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500" />
-                <span className="w-3 h-3 rounded-full bg-green-500" />
-              </div>
-              <span className="text-gray-500 text-xs">
-                ~/soc/dashboard — live
-              </span>
-              <span className="text-[10px] text-accent px-1.5 py-0.5 border border-accent/30 rounded">
-                SHIFT ACTIVE
-              </span>
-            </div>
-
-            <div className="space-y-1.5">
-              <p className="text-accent-blue">$ tail -f /var/log/soc/alerts.log</p>
-              <p className="text-gray-500">[INFO] Wazuh manager: 4 agents</p>
-              <p className="text-gray-500">[INFO] Splunk indexer: running</p>
-              <p className="text-gray-500">[INFO] Sysmon: capturing events</p>
-              <p className="text-white/80">---</p>
-              <p className="text-alert-high text-xs">
-                [HIGH] T1110 — Brute force blocked (192.168.100.100)
-              </p>
-              <p className="text-alert-medium text-xs">
-                [MED] T1059.001 — PowerShell abuse queued for review
-              </p>
-              <p className="text-alert-critical text-xs">
-                [CRIT] T1071 — C2 beacon isolated (185.x.x.x)
-              </p>
-              <p className="text-accent text-xs">
-                [OK] Firewall rules synced · IOCs updated
-              </p>
-              <p className="text-gray-500 text-xs">---</p>
-              <p className="text-accent-blue mt-2">$ mitre-map --last-alert</p>
-              <p className="text-gray-400">Tactic: Credential Access</p>
-              <p className="text-gray-400">Technique: T1110 Brute Force</p>
-              <p className="text-gray-400">
-                analyst@soc:~${" "}
-                <span className="animate-pulse text-accent-blue">▊</span>
-              </p>
-            </div>
           </div>
         </div>
       </div>

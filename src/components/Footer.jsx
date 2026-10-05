@@ -1,5 +1,11 @@
 import { personal } from "../data/portfolio";
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiAward,
+  FiArrowUp,
+} from "react-icons/fi";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -10,7 +16,6 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-accent-blue/20 bg-black/40 backdrop-blur-sm relative">
-      {/* Top glow line */}
       <div
         className="absolute top-0 left-0 w-full h-px"
         style={{
@@ -21,9 +26,7 @@ export default function Footer() {
       />
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-        {/* Main footer content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Left: Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 rounded-md glass flex items-center justify-center text-accent-blue">
@@ -44,7 +47,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center: Status */}
           <div>
             <div className="text-[10px] font-mono text-accent-blue tracking-widest mb-3">
               SYSTEM STATUS
@@ -68,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right: Connect */}
+          {/* CONNECT — 4 links with LetsDefend */}
           <div>
             <div className="text-[10px] font-mono text-accent-blue tracking-widest mb-3">
               CONNECT
@@ -78,7 +80,7 @@ export default function Footer() {
                 href={`mailto:${personal.email}`}
                 className="flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-accent-blue transition"
               >
-                <FiMail size={12} /> {personal.email}
+                <FiMail size={12} /> Email
               </a>
               <a
                 href={personal.github}
@@ -96,13 +98,19 @@ export default function Footer() {
               >
                 <FiLinkedin size={12} /> LinkedIn
               </a>
+              <a
+                href={personal.letsdefend}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-accent-purple transition"
+              >
+                <FiAward size={12} /> LetsDefend
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-accent-blue/10 pt-6 flex flex-wrap items-center justify-between gap-4">
-          {/* Left: Copyright */}
           <div className="text-[10px] font-mono text-gray-500">
             <span className="text-accent-blue">©</span> {year}{" "}
             <span className="text-gray-400">{personal.name}</span>
@@ -110,14 +118,12 @@ export default function Footer() {
             <span>All Rights Reserved</span>
           </div>
 
-          {/* Center: Signature */}
           <div className="text-[10px] font-mono text-gray-600">
             <span className="text-gray-700">$</span>{" "}
             <span className="text-gray-500">designed & developed by</span>{" "}
             <span className="text-accent-blue">{personal.name}</span>
           </div>
 
-          {/* Right: Back to top */}
           <button
             onClick={scrollToTop}
             className="flex items-center gap-2 text-[10px] font-mono text-gray-500 hover:text-accent-blue transition group"

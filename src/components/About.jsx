@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { about, personal, stats } from "../data/portfolio";
-import { FiMapPin, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiMapPin, FiMail, FiGithub, FiLinkedin, FiAward } from "react-icons/fi";
 import { useCountUp } from "../hooks/useCountUp";
 import {
   FiTerminal,
   FiTarget,
-  FiAward,
   FiShield,
 } from "react-icons/fi";
 
@@ -48,7 +47,6 @@ function StatItem({ icon: Icon, label, value, suffix, color, delay }) {
   );
 }
 
-// Profile Avatar — BIGGER (56 = 224px)
 function ProfileAvatar() {
   const [imgError, setImgError] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -68,7 +66,6 @@ function ProfileAvatar() {
       transition={{ duration: 0.6 }}
       className="relative w-56 h-56 mx-auto mb-6"
     >
-      {/* Rotating conic glow */}
       <div
         className="absolute -inset-2 rounded-full opacity-60 blur-xl"
         style={{
@@ -78,10 +75,8 @@ function ProfileAvatar() {
         }}
       />
 
-      {/* Border ring */}
       <div className="absolute inset-0 rounded-full border-2 border-accent-blue/60 p-1.5">
         <div className="w-full h-full rounded-full overflow-hidden bg-bg-card relative">
-          {/* Photo */}
           {!imgError && (
             <img
               src="/profile.jpg"
@@ -95,7 +90,6 @@ function ProfileAvatar() {
             />
           )}
 
-          {/* Initials fallback */}
           {(imgError || !imgLoaded) && (
             <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-bg-card to-bg-secondary">
               <div
@@ -114,10 +108,8 @@ function ProfileAvatar() {
         </div>
       </div>
 
-      {/* Status dot (bigger) */}
       <div className="absolute bottom-3 right-3 w-5 h-5 rounded-full bg-accent border-2 border-bg-primary animate-pulse" />
 
-      {/* Corner accents (bigger) */}
       <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-accent-blue" />
       <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-accent-blue" />
       <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-accent-blue" />
@@ -129,7 +121,6 @@ function ProfileAvatar() {
 export default function About() {
   return (
     <section id="about" className="py-20 px-6 max-w-6xl mx-auto scroll-mt-24">
-      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -145,9 +136,7 @@ export default function About() {
         <div className="w-20 h-1 bg-accent-blue mx-auto mt-4" />
       </motion.div>
 
-      {/* Avatar + Bio + Social */}
       <div className="grid md:grid-cols-3 gap-10 mb-12 items-center">
-        {/* Avatar column */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -170,7 +159,6 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Bio + Social */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,11 +180,12 @@ export default function About() {
             </a>
           </div>
 
+          {/* Social Links — 3 columns with LetsDefend */}
           <div className="glass rounded-xl p-5">
             <h3 className="text-accent-blue font-mono mb-4 text-sm">
               $ connect --social
             </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               <a
                 href={personal.github}
                 target="_blank"
@@ -213,12 +202,19 @@ export default function About() {
               >
                 <FiLinkedin /> LinkedIn
               </a>
+              <a
+                href={personal.letsdefend}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 text-gray-300 hover:text-accent-purple transition"
+              >
+                <FiAward /> LetsDefend
+              </a>
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Stats */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
