@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-30T17:21:21.601771+00:00",
+  "lastUpdated": "2026-10-30T21:44:33.483064+00:00",
   "source": "abuse.ch",
   "feeds": [
     "feodo_tracker",
@@ -15,9 +15,9 @@
       "city": "Singapore",
       "lat": 1.3521,
       "lng": 103.8198,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
     },
     {
       "ip": "50.16.16.211",
@@ -26,9 +26,9 @@
       "city": "Tokyo",
       "lat": 35.6762,
       "lng": 139.6503,
-      "type": "Malware",
+      "type": "Exploit",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff9500"
     },
     {
       "ip": "34.204.119.63",
@@ -37,9 +37,9 @@
       "city": "London",
       "lat": 51.5074,
       "lng": -0.1278,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "178.62.3.223",
@@ -48,9 +48,9 @@
       "city": "Kyiv",
       "lat": 50.4501,
       "lng": 30.5234,
-      "type": "Exploit",
-      "severity": "HIGH",
-      "color": "#ff9500"
+      "type": "Ransomware",
+      "severity": "CRIT",
+      "color": "#ff3b3b"
     },
     {
       "ip": "27.133.154.218",
