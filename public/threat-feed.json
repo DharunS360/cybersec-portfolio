@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-25T16:20:04.140320+00:00",
+  "lastUpdated": "2026-11-26T01:14:46.802241+00:00",
   "source": "abuse.ch",
   "feeds": [
     "feodo_tracker",
@@ -15,9 +15,9 @@
       "city": "Singapore",
       "lat": 1.3521,
       "lng": 103.8198,
-      "type": "Phishing",
-      "severity": "MED",
-      "color": "#ff9500"
+      "type": "Botnet",
+      "severity": "HIGH",
+      "color": "#ff3b3b"
     },
     {
       "ip": "50.16.16.211",
@@ -37,8 +37,8 @@
       "city": "London",
       "lat": 51.5074,
       "lng": -0.1278,
-      "type": "Phishing",
-      "severity": "MED",
+      "type": "Exploit",
+      "severity": "HIGH",
       "color": "#ff9500"
     },
     {
@@ -59,9 +59,9 @@
       "city": "Frankfurt",
       "lat": 50.1109,
       "lng": 8.6821,
-      "type": "Malware",
+      "type": "Botnet",
       "severity": "HIGH",
-      "color": "#00d4ff"
+      "color": "#ff3b3b"
     }
   ]
 }
